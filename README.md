@@ -1,7 +1,7 @@
 # FashionTrend
 패션트렌드분석사이트
 
-demo파일은 백엔드(서버), fashion파일은 프론트입니다.<br><br>
+master branch로 이동 시 demo폴더와 fashion폴더가 있으며, demo폴더은 백엔드(서버), fashion폴더은 프론트입니다.<br><br>
 저는 이 프로젝트에서 프론트(일부는 공동작업)와  일부 api 호출서버, 크롤링 서버를 담당하였습니다.<br><br>
 밑은 제가 작업한 폴더입니다.<br><br><br>
 > Fashion폴더<br><br>
