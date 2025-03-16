@@ -1,0 +1,307 @@
+/* 전체 컨테이너 스타일 */
+.brand-container {
+    width: 82vw;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #eaf4fc; /* 연한 파란색 배경 */
+}
+
+/* 제목 스타일 */
+.brand-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50; /* 어두운 파란색 텍스트 */
+}
+
+/* 브랜드 카드 그리드 */
+.brand-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* 브랜드 카드 스타일 */
+.brand-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+    width: 95%;
+    opacity: 0; /* 초기 투명도 */
+    animation: flyUp 0.6s ease-out forwards;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+}
+
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* 브랜드 순위 */
+.brand-rank {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3498db; /* 강조 파란색 */
+    margin-bottom: 10px;
+}
+
+/* 브랜드 이름 */
+.brand-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 브랜드 태그 */
+.brand-tags {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 20px;
+    position: relative; /* 화살표 위치를 위한 상대 위치 */
+    display: flex;
+    justify-content: space-between; /* 태그와 화살표를 양쪽으로 분리 */
+    align-items: center;
+}
+
+/* 상품 리스트 */
+.brand-product-list {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+/* 상품 카드 */
+.brand-product-card {
+    position: relative;  /* 자식 요소 위치 기준 설정 */
+    flex: 0 0 auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+.brand-product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 상품 이미지 */
+.brand-product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* 상품 이름 (한 줄 표시) */
+.brand-product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 상품 가격 */
+.brand-product-price {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.strike-through {
+    text-decoration: line-through; 
+    color: #2980b9; 
+}
+.brand-product-price{
+    color: #2980b9;
+}
+/* 상품 할인율 */
+.brand-product-discount {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #db3f34; /* 파란색 강조 */
+    margin-top: 5px;
+}
+
+/* 할인가 */
+.brand-product-sale-price {
+    font-size: 1.2em;
+    color: #2ecc71; /* 녹색 성공 색상 */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* 등록된 상품이 없을 경우 */
+.brand-no-products {
+    text-align: center;
+    font-size: 1em;
+    color: #777;
+}
+
+/* 페이지네이션 버튼 컨테이너 */
+.brand-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* 페이지네이션 버튼 */
+.brand-pagination-button {
+    background-color: #3498db; /* 버튼 배경색 */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.brand-pagination-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.brand-pagination-button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+/* 원가 강조 */
+.strike-through {
+    text-decoration: line-through;
+    color: #2980b9; /* 강조된 원가 */
+}
+
+/* 원가 강조 */
+.highlight-price {
+    font-size: 1.2em;
+    color: #3498db;
+    font-weight: bold;
+    padding-top: 85px;
+}
+
+/* 상품 리스트 컨테이너 */
+.brand-product-list-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* 상품 리스트 */
+  .brand-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden; /* 좌우로 넘치는 내용 숨김 */
+  }
+  
+  /* 화살표 버튼 공통 스타일 */
+  .brand-pagination-arrow {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    color: #3498db; /* 화살표 색상 */
+    position: absolute;
+    z-index: 10;
+    border-radius: 90%;
+    outline: 2px solid #888;
+  }
+
+  .brand-pagination-arrow:focus{
+    outline: none;
+  }
+
+  .brand-pagination-arrow:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    display: none;
+  }
+  
+  /* 왼쪽 화살표 */
+  .brand-pagination-left {
+    left: -40px; /* 리스트 왼쪽에 위치 */
+  }
+  
+  /* 오른쪽 화살표 */
+  .brand-pagination-right {
+    right: -40px; /* 리스트 오른쪽에 위치 */
+  }
+
+  .brand-toggle-arrow {
+    font-size: 1.5em;
+    color: #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+.toggle-arrow:hover {
+    transform: scale(1.2); /* 화살표 호버 시 크기 확대 */
+}
+
+/* 플라이업 애니메이션 */
+@keyframes flyUp {
+    0% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 하트 아이콘 항상 보이게 */
+.brand-heart-icon {
+    position: absolute;
+    bottom: 10px;  /* 카드의 아래쪽 */
+    right: 10px;  /* 카드의 오른쪽 */
+    font-size: 24px;
+    color: #ffc0cb; /* 분홍색 */
+    opacity: 1; /* 항상 보이도록 설정 */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* 애니메이션 */
+}
+
+/* 하트 아이콘 호버 시 확대 */
+.brand-heart-icon:hover {
+    transform: scale(1.3); /* 크기를 1.3배로 확대 */
+}
+
+/* 하트 아이콘 컨테이너 */
+.brand-icon-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+}
+

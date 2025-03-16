@@ -1,0 +1,50 @@
+.trend-shopping-container {
+    margin: 20px;
+    .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .product-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        height: 15vh;
+    }
+    
+    .product-image {
+        width: 150px;
+        height: 13vh;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .product-details {
+        flex-grow: 1;
+    }
+    
+    .product-title {
+        cursor: pointer;
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+    
+    .product-price {
+        font-size: 1em;
+        color: #555;
+    }
+    
+}
+
+.trend-shopping-header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+

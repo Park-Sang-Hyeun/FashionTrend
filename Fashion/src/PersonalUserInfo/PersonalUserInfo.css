@@ -1,0 +1,36 @@
+.personal-user-info-container {
+    display: flex; /* 가로 배치 */
+    gap: 20px; /* 왼쪽과 오른쪽 간격 */
+    margin: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .personal-user-info-left {
+    flex: 1; /* 왼쪽 영역 크기 */
+    max-width: 300px; /* 최대 너비 설정 */
+  }
+  
+  .personal-user-info-right {
+    flex: 2; /* 오른쪽 영역 크기 */
+    display: flex;
+    flex-direction: column; /* 수직 배치 */
+    gap: 20px; /* 위아래 간격 */
+  }
+  
+  .personal-user-info-left, 
+  .personal-user-info-right {
+    padding: 20px;
+  }
+  
+  .personal-user-info-left {
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+  }
+  
+  .personal-user-info-right > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

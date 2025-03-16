@@ -1,0 +1,47 @@
+/* src/components/Header.css */
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 15vw; /* 사이드바 너비만큼 왼쪽에 여백을 주어 겹치지 않도록 설정 */
+    width: calc(100% - 15vw); /* 전체 너비에서 사이드바 너비만큼 빼서 설정 */
+    height: 50px;
+    background-color: #f7f9fc;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1001; /* 헤더가 사이드바 위에 오도록 설정 */
+    user-select: none;  /* 텍스트 선택 비활성화 */
+    cursor: default;    /* 클릭 시 텍스트 입력 커서가 아닌 기본 커서로 변경 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    /* border-left: 2px solid #ccc; 사이드바 오른쪽 경계선 추가 */
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-family: "Dongle",serif;
+    font-size: 30px;
+    color: #555;
+  }
+  
+/* 오른쪽 끝에 배치될 둥근 이미지 스타일 */
+.header-right-image {
+    width: 55px; /* 원하는 크기로 설정 */
+    height: 55px; /* 가로 세로 같게 설정 */
+    object-fit: cover; /* 이미지 비율을 유지하면서 잘리도록 설정 */
+    border-radius: 50%; /* 원형으로 만들기 */
+    margin-right: 50px;
+    margin-top: 10px;
+  }
+
+  .header-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  

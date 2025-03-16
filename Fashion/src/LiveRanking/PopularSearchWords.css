@@ -1,0 +1,62 @@
+.popular-search-words {
+    margin: 0 auto; /* 랭킹을 가운데로 위치 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    width: 100%;
+    border: 1px #eee;
+}
+
+
+.ranking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.ranking-header h2 {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+
+}
+
+.arrow-button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* 버튼을 둥글게 */
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.arrow-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.arrow-button:not(:disabled):hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+li:last-child {
+    border-bottom: none;
+}

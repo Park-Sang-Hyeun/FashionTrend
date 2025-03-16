@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum Gothic&display=swap");
+
+.bubble {
+    font-family: "Jua", serif;
+    position: absolute; /* 부모 요소 기준으로 위치 */
+    top: 55px; /* 아이콘의 아래쪽으로 이동 (필요에 따라 조정 가능) */
+    right: 0; /* 말풍선의 오른쪽 정렬 */
+    width: 15vw; /* 말풍선 너비 */
+    min-width: 200px;
+    height: auto;
+    min-height: 90px;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: #dbdbdb solid 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+    display: flex;
+    flex-direction: column; /* 요소를 수직 정렬 */
+    align-items: center; /* 자식 요소들을 수평 중앙 정렬 */
+    justify-content: center; /* 자식 요소들을 수직 중앙 정렬 */
+    gap: 10px; /* 요소 간 간격 추가 */
+    cursor: auto;
+  }
+  
+  .bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 10px 10px; /* 삼각형 크기 조정 */
+    border-color: transparent transparent #FFFFFF transparent;
+    display: block;
+    width: 0;
+    top: -10px; /* 말풍선의 위쪽에서 삼각형 위치 */
+    right: 20px; /* 말풍선의 우측 상단에 위치 */
+    z-index: 1;
+  }
+  
+  .bubble:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 12px 12px; /* 삼각형 크기 조정 */
+    border-color: transparent transparent #dbdbdb transparent;
+    display: block;
+    width: 0;
+    top: -14px; /* 말풍선의 위쪽에서 삼각형 위치 */
+    right: 18px; /* 말풍선의 우측 상단에 위치 */
+    z-index: 0;
+  }
+
+.bubble-username {
+  font-family: "Jua",serif;
+  font-size: 30px;            /* 텍스트 크기 */
+  font-weight: 600;           /* 약간 굵게 */
+  margin-bottom: 5px;        /* 아래 여백 */
+  text-align: center;         /* 가운데 정렬 */
+  color: #2c3e50;             /* 기본 텍스트 색상: 어두운 푸른색 */
+  letter-spacing: 0.5px;      /* 글자 간격 */
+  
+  /* 그라디언트 텍스트 스타일 (심플) */
+  background: linear-gradient(90deg, #87ceeb, #4682b4); 
+  -webkit-background-clip: text;  /* 텍스트만 그라디언트 적용 */
+  -webkit-text-fill-color: transparent; /* 투명 텍스트 */
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+}
+
+/* 메뉴 스타일 */
+.bubble-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 메뉴를 왼쪽 정렬 */
+}
+
+/* 메뉴 항목 */
+.bubble-item {
+  width: 100%; /* 말풍선 안에 맞추기 */
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: bold; /* 글씨 굵게 */
+  color: #2c3e50; /* 기본 텍스트 색상 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  cursor: pointer;
+  border-top: 1px solid #e0e0e0; /* 항목 구분선 */
+  position: relative; /* 글씨 이동을 위해 기준 설정 */
+  transition: color 0.2s, transform 0.2s; /* 색상과 위치 이동에 부드러운 효과 */
+}
+
+.bubble-item-loggout-top {
+  width: 100%; /* 말풍선 안에 맞추기 */
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: bold; /* 글씨 굵게 */
+  color: #2c3e50; /* 기본 텍스트 색상 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  cursor: pointer;
+  position: relative; /* 글씨 이동을 위해 기준 설정 */
+  transition: color 0.2s, transform 0.2s; /* 색상과 위치 이동에 부드러운 효과 */
+}
+
+.bubble-item:hover::after {
+  transform: none; /* 구분선에 영향 없도록 유지 */
+}
+
+/* 글씨만 이동 */
+.bubble-item span {
+  display: inline-block; /* transform이 적용되도록 설정 */
+  transition: transform 0.2s; /* 이동 효과 */
+  padding-left: 15px;
+}
+
+.bubble-item:hover span {
+  transform: translateX(5px); /* 글씨만 오른쪽으로 이동 */
+  color: #2d95f7;
+}
+
+
+.bubble-item-loggout-top:hover::after {
+  transform: none; /* 구분선에 영향 없도록 유지 */
+}
+
+/* 글씨만 이동 */
+.bubble-item-loggout-top span {
+  display: inline-block; /* transform이 적용되도록 설정 */
+  transition: transform 0.2s; /* 이동 효과 */
+  padding-left: 15px;
+}
+
+.bubble-item-loggout-top:hover span {
+  transform: translateX(5px); /* 글씨만 오른쪽으로 이동 */
+  color: #2d95f7;
+}

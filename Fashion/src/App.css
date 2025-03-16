@@ -1,0 +1,24 @@
+/* 기본 스타일 */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 최소 높이를 화면 전체로 설정 */
+  height: auto; /* 내용에 따라 자동으로 높이 조절 */
+  background-color: #fff; /* 기본 배경색 */
+  transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+}
+
+/* /user-info 경로의 배경색 */
+.app.user-info-bg {
+  background-color: #b0c4de; /* /user-info 페이지 배경색 */
+}
+
+.content {
+  margin-left: 15vw; /* 사이드바 너비만큼 왼쪽 여백을 추가 */
+  margin-top: 60px; /* 헤더 높이만큼 위쪽 여백을 추가 */
+  width: 84vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px); /* 헤더를 제외한 화면을 채움 */
+}

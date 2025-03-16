@@ -1,0 +1,133 @@
+/* Register 컨테이너 스타일 */
+.register-container {
+  margin: 50px auto; /* 중앙 정렬 */
+  height: auto; /* 콘텐츠 높이에 맞게 자동 조정 */
+  min-height: 83vh;
+  width: 70vw; /* 너비 설정 */
+  max-width: 500px; /* 최대 너비 설정 */
+  padding: 20px 20px; /* 내부 여백 */
+  border: 1px solid #ddd; /* 테두리 색상 */
+  border-radius: 12px; /* 둥근 모서리 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 */
+  background: linear-gradient(135deg, #f9f9f9, #ffffff); /* 그라데이션 배경 */
+  box-sizing: border-box; /* 컨테이너 크기 계산 */
+  overflow: hidden; /* 내용물이 넘치지 않도록 설정 */
+}
+
+/* 모든 요소에 box-sizing 적용 */
+.register-container * {
+  box-sizing: border-box; /* 모든 자식 요소에 동일한 계산 방식 적용 */
+}
+
+/* 제목 스타일 */
+.register-title {
+  text-align: center;
+  margin-bottom: 20px; /* 제목 아래 여백 축소 */
+  font-size: 22px; /* 제목 크기 약간 축소 */
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 레이블 스타일 */
+.register-label {
+  display: block;
+  margin-bottom: 8px; /* 레이블 아래 여백 축소 */
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+/* 인풋 필드 스타일 */
+.register-input,
+.register-select {
+  width: 100%; /* 입력 필드 전체 너비 */
+  padding: 10px; /* 내부 여백 감소 */
+  margin-bottom: 15px; /* 필드 간 여백 축소 */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px; /* 폰트 크기 약간 축소 */
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-input:focus,
+.register-select:focus {
+  border-color: #2687CE;
+  box-shadow: 0 0 6px rgba(38, 135, 206, 0.4);
+  outline: none;
+}
+
+/* 중복확인 버튼 스타일 */
+.check-email-button {
+  padding: 8px 10px; /* 버튼 크기 축소 */
+  background-color: #3498db;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.check-email-button:hover {
+  background-color: #1f6ba8;
+  transform: scale(1.05);
+}
+
+/* 가입하기 버튼 스타일 */
+.register-submit-button {
+  width: 100%;
+  padding: 12px; /* 버튼 높이 */
+  margin-top: 30px; /* 버튼 위에 마진 추가 */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px; /* 버튼 텍스트 크기 */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-submit-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.register-submit-button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+
+/* 에러 메시지 스타일 */
+.register-error-message {
+  color: #e74c3c;
+  margin-top: -5px; /* 위쪽 여백 축소 */
+  margin-bottom: 10px; /* 아래쪽 여백 축소 */
+  font-size: 12px; /* 글자 크기 약간 축소 */
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 15px; /* 작은 화면에서 패딩 감소 */
+    margin-top: 30px;
+  }
+
+  .register-title {
+    font-size: 18px; /* 제목 크기 축소 */
+  }
+
+  .check-email-button,
+  .register-submit-button {
+    font-size: 12px; /* 버튼 텍스트 크기 축소 */
+  }
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15vw; /* 사이드바의 너비 설정 */
+  height: 100%; /* 전체 높이 설정 */
+  background-color: #f7f9fc;
+  color: black;
+  z-index: 1000; /* 헤더와 겹치지 않도록 설정 */
+  user-select: none; /* 텍스트 선택 비활성화 */
+  cursor: default; /* 클릭 시 텍스트 입력 커서가 아닌 기본 커서로 변경 */
+  display: flex; /* Flexbox로 구조 설정 */
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  text-align: center;
+  width: 15vw;
+  height: 80px;
+  color: #292929;
+  background-color: #f7f9fc;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 트랜지션 효과 */
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Georgia", "Times New Roman", serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, font-size 0.3s ease; /* 글씨 변화 트랜지션 */
+}
+
+/* 마우스 호버 시 효과 */
+.sidebar-logo:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 그림자 효과 강화 */
+}
+
+.sidebar-logo:hover h2 {
+  transform: scale(1.01); /* 글씨가 커짐 */
+  font-size: 36px; /* 글씨 크기 증가 */
+  color: #292929;
+}
+
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 80px 0 0 0;
+  margin: 0;
+  font-size: 22px;
+  font-family: "Jua", serif;
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 세로 정렬 */
+  justify-content: flex-start; /* 상단 정렬 */
+  overflow-y: auto; /* 메뉴만 스크롤 가능 */
+  max-height: calc(100% - 80px); /* 로고 높이를 제외한 영역까지만 사용 */
+  box-sizing: border-box; /* 패딩 포함 높이 계산 */
+  z-index: 5; /* 메뉴가 로고 뒤로 숨지 않도록 설정 */
+}
+
+.sidebar li {
+  padding: 15px;
+ 
+  transition: background-color 0.3s, color 0.3s; /* 배경색과 글자색 전환 효과 */
+  border: none; /* 경계선 제거 */
+  border-radius: 8px; /* 모서리를 부드럽게 */
+}
+
+.sidebar li:hover {
+  background-color: #eaeaea; /* 마우스 올릴 때 배경색 변경 */
+  color: #333333; /* 글자색 변경 */
+}
+
+.sidebar li.active {
+  background-color: #3e71fd; /* 활성화된 메뉴의 배경색 */
+  color: white; /* 활성화된 메뉴의 글자색 */
+  font-weight: bold; /* 활성화된 메뉴 강조 */
+}
+
+.sidebar a {
+  color: inherit; /* 부모의 글자색을 상속 */
+  text-decoration: none; /* 밑줄 제거 */
+  display: block; /* 링크를 블록으로 만들어 li 전체 클릭 가능 */
+  padding: 15px; /* li의 padding과 동일하게 설정하여 일관된 클릭 영역 */
+}
+
+/* 스크롤바 꾸미기 */
+.sidebar ul::-webkit-scrollbar {
+  width: 10px; /* 세로 스크롤바 너비 */
+}
+
+.sidebar ul::-webkit-scrollbar-track {
+  background: #f0faff; /* 트랙 배경색 (밝고 부드러운 파란색) */
+  border-radius: 12px; /* 트랙 모서리 더 둥글게 */
+}
+
+.sidebar ul::-webkit-scrollbar-thumb {
+  background: rgba(144, 202, 249, 0.8); /* 핸들 색상 (연한 파란색, 약간 투명) */
+  border-radius: 12px; /* 핸들 모서리 더 둥글게 */
+  border: 3px solid #f0faff; /* 핸들과 트랙 사이 여백 강조 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 살짝 입체감을 위한 그림자 */
+}
+
+.sidebar ul::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 181, 246, 0.9); /* 마우스를 올렸을 때 핸들 색상 (조금 더 진한 파란색) */
+  border: 3px solid #e8f7ff; /* 트랙과의 대비를 살짝 줄임 */
+}
+
+/* Firefox에서 스크롤바 꾸미기 */
+.sidebar ul {
+  scrollbar-width: thin; /* 스크롤바 너비 */
+  scrollbar-color: rgba(144, 202, 249, 0.8) #f0faff; /* 핸들 색상과 트랙 색상 */
+}

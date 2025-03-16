@@ -1,0 +1,49 @@
+{
+  "name": "fashion",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^3.2.3",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@fortawesome/fontawesome-svg-core": "^6.7.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@headlessui/react": "^2.2.0",
+    "@nivo/line": "^0.88.0",
+    "@react-spring/web": "^9.7.5",
+    "@visx/scale": "^3.12.0",
+    "@visx/text": "^3.12.0",
+    "@visx/wordcloud": "^3.12.0",
+    "axios": "^1.7.8",
+    "chart.js": "^4.4.6",
+    "framer-motion": "^11.13.1",
+    "plotly": "^1.0.6",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-confirm-alert": "^3.0.6",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.28.0",
+    "react-toastify": "^10.0.6",
+    "react-transition-group": "^4.4.5",
+    "sweetalert2": "^11.14.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.4"
+  }
+}

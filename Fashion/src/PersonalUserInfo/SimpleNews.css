@@ -1,0 +1,42 @@
+/* .simple-news {
+    margin: 20px;
+    padding: 20px;
+
+  }
+  
+  .simple-news h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .simple-news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .simple-news-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .simple-news-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .simple-news-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .simple-news-content h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+  }
+   */

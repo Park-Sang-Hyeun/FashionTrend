@@ -1,0 +1,253 @@
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 30px;
+  }
+  
+  .news-card {
+    padding: 10px;
+    width: 45%;
+    border-radius: 12px; /* 둥근 모서리 */
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* 그림자 효과 */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    min-width: 500px;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 트랜지션 효과 */
+  }
+  
+  .news-card:hover {
+    transform: translateY(-10px); /* 호버 시 카드가 살짝 올라오는 효과 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* 그림자 강하게 */
+  }
+  
+  .news-link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .news-image {
+    width: 50%;
+    padding: 12px;
+    position: relative;
+    border-right: 2px solid #f0f0f0; /* 이미지와 제목 구분선 */
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* 이미지도 둥글게 처리 */
+    transition: transform 0.3s ease; /* 이미지 호버 효과 */
+  }
+  
+  .news-image:hover img {
+    transform: scale(1.1); /* 호버 시 이미지 확대 */
+  }
+  
+  .news-title {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  
+  .news-title h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .news-card a:hover .news-title h3 {
+    color: #007BFF; /* 호버 시 제목 색상 변경 */
+  }
+  
+  /* 작은 화면에서 카드 크기 조정 */
+  @media (max-width: 768px) {
+    .news-card {
+      width: 90%; /* 작은 화면에서는 카드 너비를 더 넓게 */
+    }
+  
+    .news-image, .news-title {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .news-image img {
+      border-radius: 12px; /* 이미지의 둥근 모서리 크기 수정 */
+    }
+  }
+  
+  .favorite-btn {
+    background: none;
+    border: none;  /* 버튼 테두리 제거 */
+    outline: none;
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;  /* 상단 10px 위치 */
+    right: 10px;  /* 우측 10px 위치 */
+  }
+  
+  .favorite-btn.favorite {
+    color: #ffc401;  /* 즐겨찾기 상태일 때 별을 노랗게 */
+  }
+  
+  .news-card {
+    position: relative;
+    width: 45%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    min-width: 500px;
+    max-width: 900px;
+  }
+  
+/* 전체 로딩 메시지 스타일 */
+.news-loading-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 스피너와 텍스트 사이 간격 */
+  background-color: #3498db; /* 배경색 */
+  color: #fff; /* 텍스트 색상 */
+  padding: 15px 25px; /* 내부 여백 */
+  border-radius: 15px; /* 모서리를 둥글게 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  font-size: 18px; /* 텍스트 크기 */
+  font-weight: bold; /* 텍스트 굵기 */
+  text-align: center;
+
+  /* 화면 중앙 정렬 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 중앙으로 이동 */
+
+  animation: pulse 1.5s infinite; /* 크기 변화 애니메이션 */
+  z-index: 9999; /* 다른 요소 위에 표시 */
+}
+
+/* 스피너 스타일 */
+.news-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ddd; /* 바깥쪽 회색 */
+  border-top: 3px solid #fff; /* 위쪽 흰색 */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* 회전 애니메이션 */
+}
+
+/* 텍스트 애니메이션 */
+.news-loading-text {
+  animation: blink 1.5s infinite; /* 텍스트 깜빡임 */
+}
+
+/* 스피너 회전 애니메이션 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 로딩 메시지 크기 변화 애니메이션 */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* 텍스트 깜빡이는 애니메이션 */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.favorite-btn {
+  background: none; /* 배경 제거 */
+  border: none; /* 테두리 제거 */
+  color: #f1c40f; /* 별 색상 (골드) */
+  font-size: 24px; /* 별 크기 */
+  cursor: default; /* 클릭 가능하지 않음 */
+  transition: transform 0.3s ease; /* 크기 변화 효과 */
+  outline: none;
+  cursor: pointer;
+}
+.favorite-btn:focus {
+  outline: none; /* 클릭 시 아웃라인 제거 */
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2); /* 호버 시 크기 살짝 확대 */
+  outline: none;
+}
+
+
+.favorite-container {
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.news-tooltip {
+  position: absolute;
+  bottom: 60px; /* 별 위에 표시 */
+  right: 60px; /* 별 중심에 맞추기 */
+  transform: translateX(50%); /* 중앙 정렬 */
+  background-color: rgba(50, 50, 50, 0.9); /* 어두운 반투명 배경 */
+  color: #fff; /* 흰색 텍스트 */
+  padding: 8px 12px; /* 여백 추가 */
+  border-radius: 8px; /* 둥근 모서리 */
+  font-size: 12px; /* 글자 크기 */
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  z-index: 10;
+  opacity: 0; /* 초기 상태: 보이지 않음 */
+  transform: translateY(10px) translateX(50%); /* 처음에 아래쪽에 숨김 */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* 부드러운 나타남 효과 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 그림자 효과 */
+}
+
+.news-tooltip::after {
+  content: ''; /* 삼각형 추가 */
+  position: absolute;
+  bottom: -15px; /* 툴팁 아래쪽에 삼각형 */
+  left: 74px;
+  transform: translateX(-50%); /* 중앙 정렬 */
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(50, 50, 50, 0.9) transparent transparent transparent; /* 배경과 동일한 색상 */
+}
+
+.favorite-container:hover .news-tooltip {
+  opacity: 1; /* 툴팁이 보이도록 설정 */
+  transform: translateY(0) translateX(50%); /* 제자리로 이동 */
+}
+

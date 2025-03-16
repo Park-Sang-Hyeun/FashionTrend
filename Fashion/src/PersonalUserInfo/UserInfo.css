@@ -1,0 +1,190 @@
+/* 전체 카드 스타일 */
+.user-info-card {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 15px;
+    padding: 90px;
+    margin: 50px;
+    width: 50%;
+    height: 70%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    p{
+        height: 4vh;
+    }
+  }
+  
+  .user-info-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 제목 스타일 */
+  .user-info-card h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* 아바타 스타일 */
+  .user-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar-img {
+    border-radius: 50%;
+    width: 17%;
+    height: 17%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 텍스트와 필드 스타일 */
+  .user-info-card p {
+    margin: 35px 0 35px 0;
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .user-info-card p:last-child {
+    border-bottom: none;
+  }
+  
+  .info-icon {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.2rem;
+  }
+  
+  .user-info-card strong {
+    flex: 1;
+    color: #333;
+  }
+  
+  .user-info-card input,
+  .user-info-card select {
+    flex: 2;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .user-info-card input:focus,
+  .user-info-card select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+
+
+  .info-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info-button-group button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info-button-group button:hover {
+  transform: translateY(-2px);
+}
+
+.info-btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.info-btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.info-btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.info-btn-delete:hover {
+  background-color: #b21f2d;
+}
+
+.info-btn-save {
+  background-color: #28a745;
+  color: white;
+}
+
+.info-btn-save:hover {
+  background-color: #218838;
+}
+
+.info-btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.info-btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+
+.delete-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.delete-modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-modal-buttons button:first-child {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-modal-buttons button:first-child:hover {
+  background-color: #ff0000;
+}
+
+.delete-modal-buttons button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+.delete-modal-buttons button:last-child:hover {
+  background-color: #5a6268;
+}

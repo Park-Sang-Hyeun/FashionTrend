@@ -1,0 +1,108 @@
+/* 전체 컨테이너 스타일 */
+.trend-analysis {
+    display: flex;
+    flex-direction: column; /* 세로 배치 */
+    justify-content: space-between; /* 세로 간격 균등 배치 */
+    height: 100%;
+    width: 84.1vw;
+    min-height: 91.3vh; /* 최소 높이를 화면 전체로 설정 */
+    padding: 30px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: #f0f4f8; 
+    user-select: none;  /* 텍스트 선택 비활성화 */
+  }
+  
+  /* 입력 패널 스타일 */
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 입력 간격 */
+    margin-bottom: 20px;
+  }
+  
+  .inputs input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 81vw;
+  }
+  
+  .inputs input:focus {
+    border-color: #3498db; /* 포커스 시 테두리 색 */
+    outline: none;
+  }
+  
+  .inputs .btn {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 81vw;
+  }
+  
+  .inputs .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* 비교 결과 컨테이너 */
+  .comparison-container {
+    width: 79vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 오른쪽 패널 (성별/연령 비교 섹션) */
+  .right-panel {
+    width: 79vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-panel h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* 비교 행 */
+  .comparison-row {
+    display: flex; /* 가로 정렬 */
+    flex-direction: row; /* 가로 배치 */
+    justify-content: space-between; /* 두 요소를 양쪽으로 분리 */
+    gap: 20px; /* 성별/연령 비교 간격 */
+  }
+  
+  /* 성별 비교 및 연령 비교 컨테이너 */
+  .gender-comparison-container,
+  .age-comparison-container {
+    flex: 1; /* 두 컨테이너를 동일한 비율로 차지 */
+    padding: 10px;
+    background-color: #f0f4f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 40vw;
+  }
+  
+  .month-dropdown {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 경고 메시지 스타일 */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
