@@ -2,7 +2,7 @@
 패션트렌드분석사이트
 
 demo파일은 백엔드(서버), fashion파일은 프론트입니다.<br><br>
-저는 이 프로젝트에서 프론트(일부는 공동작업)와 api 호출서버, 크롤링 서버를 담당하였습니다.<br><br>
+저는 이 프로젝트에서 프론트(일부는 공동작업)와  일부 api 호출서버, 크롤링 서버를 담당하였습니다.<br><br>
 밑은 제가 작업한 폴더입니다.<br><br><br>
 > Fashion폴더
 Brand폴더: 해당 폴더에서 brand메뉴를 작업하였습니다.<br>
@@ -18,6 +18,13 @@ sidebar: 해당 폴더에서 좌측의 메뉴를 작업하였습니다.<br>
 TrendAnalysis: 해당 폴더에서 올해의 트렌드 분석 메뉴를 작업하였습니다.<br>
 TrendsAndSearchContainer: 해당 폴더에서 Trend 메뉴를 작업하였습니다.<br>
 WishlistPage: 해당 폴더에서 내가 찜한 상품을 보여주는 작업을 하였습니다.(공동 개발)<br>
+<br><br><br>
+> demo폴더
+AgeShoppingInsightsService.java: 네이버 api를 통해 연령별 데이터를 가져옵니다.<br>
+BrandCrawlingController/Service.java: 네이버 쇼핑 사이트에서 인기브랜드를 크롤링하는 서버입니다.<br>
+CrawlerController.java: 패션 관련 인기검색어 100개를 크롤링하는 서버입니다.<br>
+CrawlingService.java: 패션 뉴스 기사를 크롤링하는 서버입니다.<br>
+GenderShoppingInsightsService.java: 네이버 api를 통해 성별 데이터를 가져옵니다.<br>
 
 - 탭과 카테고리를 이용하여, 큰 틀을 잡아 네이버에서 제공하는 자료를 그래프로 보여줍니다.
 - 올해의 트렌드를 비교분석하여 두 트렌드의 연관 관계를 한 눈에 보기 편하게 나타냅니다.
