@@ -4,7 +4,7 @@
 demo파일은 백엔드(서버), fashion파일은 프론트입니다.<br><br>
 저는 이 프로젝트에서 프론트(일부는 공동작업)와  일부 api 호출서버, 크롤링 서버를 담당하였습니다.<br><br>
 밑은 제가 작업한 폴더입니다.<br><br><br>
-> Fashion폴더
+> Fashion폴더<br>
 Brand폴더: 해당 폴더에서 brand메뉴를 작업하였습니다.<br>
 Bubble폴더: 해당 폴더에서 우측 상단 아이콘을 클릭 시 나오는 말풍선 모양과 그 안의 메뉴를 작업하였습니다.<br>
 FavoriteNewsPage: 해당 폴더에서 로그인한 사용자가 즐겨찾기한 뉴스기사를 보여주는 메뉴를 작업하였습니다.(공동 개발)<br>
@@ -19,7 +19,7 @@ TrendAnalysis: 해당 폴더에서 올해의 트렌드 분석 메뉴를 작업�
 TrendsAndSearchContainer: 해당 폴더에서 Trend 메뉴를 작업하였습니다.<br>
 WishlistPage: 해당 폴더에서 내가 찜한 상품을 보여주는 작업을 하였습니다.(공동 개발)<br>
 <br><br><br>
-> demo폴더
+> demo폴더<br>
 AgeShoppingInsightsService.java: 네이버 api를 통해 연령별 데이터를 가져옵니다.<br>
 BrandCrawlingController/Service.java: 네이버 쇼핑 사이트에서 인기브랜드를 크롤링하는 서버입니다.<br>
 CrawlerController.java: 패션 관련 인기검색어 100개를 크롤링하는 서버입니다.<br>
